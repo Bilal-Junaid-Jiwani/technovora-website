@@ -1,0 +1,34 @@
+# Technovora
+
+> Technovora is a software studio that designs and builds custom software, AI automation, mobile apps, and cloud infrastructure for growing teams. Offices in Sheridan, Wyoming and Hong Kong.
+
+Technovora works with startups and growing companies that need production software shipped by a senior team: fixed-scope quotes in writing before work starts, weekly staging demos, and full code ownership from the first commit. There are no displayed prices or tiers on this site — project estimation happens through a short questionnaire.
+
+## Services
+
+- [AI automation](https://technovora.com/services/ai-automation): AI agents, workflow automation, and custom AI tools that replace manual processes.
+- [Web development](https://technovora.com/services/web-development): Next.js web platforms and rebuilds focused on speed and maintainability.
+- [Mobile apps](https://technovora.com/services/mobile-apps): Cross-platform and native mobile apps.
+- [Cloud & DevOps](https://technovora.com/services/cloud-devops): Cloud migrations, CI/CD pipelines, and infrastructure that scales.
+- [Design](https://technovora.com/services/design): UI/UX design, design systems, and prototypes.
+- [Social media management](https://technovora.com/services/smm): Content pipelines and social management for B2B teams.
+
+## Key pages
+
+- [About](https://technovora.com/about): Who Technovora is and how the studio works.
+- [Project estimation](https://technovora.com/packages): A questionnaire (one question per screen, 6–9 questions per service) that produces a project brief sent to the sales team. No prices are shown.
+- [Portfolio](https://technovora.com/portfolio): Selected recent engagements. Client names are withheld where engagements are under NDA.
+- [Blog](https://technovora.com/blog): Practical notes on shipping software, using AI agents well, and treating performance as a product decision.
+- [Contact](https://technovora.com/contact): Start a conversation. Replies within one business day.
+
+## Contact
+
+- Sales: sales@technovora.com
+- General: moin@technovora.com
+- Book a call: https://calendly.com/technovora
+- GitHub: https://github.com/Technovora
+
+## Optional
+
+- [Privacy policy](https://technovora.com/privacy): How visitor data is handled.
+- [Terms](https://technovora.com/terms): Site terms of use.

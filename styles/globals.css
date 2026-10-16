@@ -1,0 +1,305 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* ── Light theme — monday.com / Stripe clean premium (DEFAULT) ── */
+  --bg: #ffffff;
+  --surface: #f6f8fa;
+  --surface-2: #eef1f5;
+  --card: #ffffff;
+  --text: #0e1526;
+  --muted: #5b6472;
+  --faint: #8b94a3;
+  --hairline: #e5e9f0;
+
+  /* ONE brand accent, used sparingly */
+  --accent: #f97316;
+  --accent-hover: #ea6a0a;
+  --accent-ink: #ffffff;
+  --accent-soft: rgba(249, 115, 22, 0.08);
+
+  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --shadow-md: 0 6px 16px -6px rgba(16, 24, 40, 0.1);
+  --shadow-lg: 0 16px 40px -16px rgba(16, 24, 40, 0.16);
+}
+
+.dark {
+  /* ── Dark theme — Linear clean ── */
+  --bg: #08090c;
+  --surface: #0e1014;
+  --surface-2: #15181e;
+  --card: #101318;
+  --text: #f2f4f7;
+  --muted: #9aa3b2;
+  --faint: #6b7484;
+  --hairline: rgba(255, 255, 255, 0.09);
+
+  --accent: #f97316;
+  --accent-hover: #fb8126;
+  --accent-ink: #ffffff;
+  --accent-soft: rgba(249, 115, 22, 0.12);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 20px -8px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 48px -16px rgba(0, 0, 0, 0.6);
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-card: var(--card);
+  --color-foreground: var(--text);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-hairline: var(--hairline);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+
+  --font-sans: var(--font-inter);
+
+  /* Inter-only rule: every font-mono usage renders in Inter. */
+  --font-mono: var(--font-inter);
+}
+
+/* ── Base ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "cv11", "ss01";
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ── Type scale: Stripe/Linear tight headlines ── */
+.display {
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1.04;
+  text-wrap: balance;
+}
+
+.h2 {
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.h3 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.lead {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--muted);
+  text-wrap: pretty;
+}
+
+/* ── Eyebrow label (Stripe-style kicker) ── */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.eyebrow::before {
+  content: "";
+  width: 1.25rem;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* ── Layout rhythm ── */
+.section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+@media (min-width: 768px) {
+  .section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+.container-x {
+  width: 100%;
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* ── Hairline divider ── */
+.rule {
+  border-top: 1px solid var(--hairline);
+}
+
+/* ── Buttons: Stripe-clean, 10px radius, no pill ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  border-radius: 10px;
+  padding: 0.72rem 1.35rem;
+  box-shadow: var(--shadow-sm);
+  transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+  white-space: nowrap;
+}
+.btn-primary:hover {
+  background: var(--accent-hover);
+  box-shadow: var(--shadow-md);
+}
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--card);
+  color: var(--text);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  padding: 0.72rem 1.35rem;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.18s ease, background 0.18s ease, transform 0.18s ease;
+  white-space: nowrap;
+}
+.btn-secondary:hover {
+  border-color: var(--faint);
+  background: var(--surface);
+}
+.btn-secondary:active {
+  transform: scale(0.98);
+}
+
+/* ── Cards: white/hairline light · Linear inset-highlight dark ── */
+.card {
+  background: var(--card);
+  border: 1px solid var(--hairline);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+}
+.dark .card {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), var(--shadow-sm);
+}
+
+.card-hover {
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--faint);
+}
+
+/* ── Tinted band (one restrained wash per page max) ── */
+.band {
+  background: var(--surface);
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+}
+
+/* ── Stat numerals ── */
+.stat-num {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* ── Focus visibility ── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   LEGACY SHIMS — preserved /about page only.
+   AboutHorizontalSection (kept byte-identical per user request) predates
+   the rebuild token system and uses these old tokens/utilities.
+   DO NOT use in new code — new code uses the tokens above.
+───────────────────────────────────────────── */
+@theme inline {
+  --color-bg-base: var(--bg);
+  --color-bg-surface: var(--surface);
+  --color-bg-border: var(--hairline);
+  --color-text: var(--text);
+  --color-text-muted: var(--muted);
+  --color-orange: var(--accent);
+  --color-magenta: #a02077;
+  --color-brand-black: #0d0d0d;
+}
+
+.font-bebas {
+  font-family: var(--font-bebas), "Impact", "Arial Narrow", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.font-display {
+  font-family: var(--font-syne), var(--font-inter), system-ui, sans-serif;
+}
+
+/* Related-link box at the end of blog articles: restrained bordered note. */
+.related-link {
+  border: 1px solid var(--hairline);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  background: var(--surface);
+}
+.related-link a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.related-link a:hover {
+  text-decoration-thickness: 2px;
+}
