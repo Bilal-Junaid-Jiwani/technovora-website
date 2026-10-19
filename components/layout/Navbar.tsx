@@ -44,10 +44,10 @@ export function Navbar() {
           <Image
             src="/images/logo-wordmark.webp"
             alt="Technovora"
-            width={168}
-            height={30}
+            width={221}
+            height={100}
             priority
-            className="h-[34px] w-auto dark:invert dark:hue-rotate-180"
+            className="h-[44px] w-auto dark:invert dark:hue-rotate-180"
           />
         </Link>
 
