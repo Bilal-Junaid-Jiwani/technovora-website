@@ -48,9 +48,16 @@ export function Footer() {
               <Image
                 src="/images/logo-wordmark.webp"
                 alt="Technovora"
-                width={168}
-                height={30}
-                className="h-[34px] w-auto dark:invert dark:hue-rotate-180"
+                width={221}
+                height={100}
+                className="h-[34px] w-auto dark:hidden"
+              />
+              <Image
+                src="/images/logo-wordmark-dark.webp"
+                alt="Technovora"
+                width={221}
+                height={100}
+                className="hidden h-[34px] w-auto dark:block"
               />
             </Link>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted">

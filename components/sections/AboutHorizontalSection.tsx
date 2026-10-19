@@ -69,7 +69,8 @@ export function AboutHorizontalSection() {
               <div className="md:col-span-5 lg:col-span-4 border-l-0 md:border-l-4 border-text relative flex flex-col bg-bg-base">
                 <div className="flex-1 p-4 lg:p-6 2xl:p-8 border-b-4 border-text flex items-center justify-center min-h-[150px] 2xl:min-h-[250px] relative overflow-hidden">
                    <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: "linear-gradient(var(--text) 1px, transparent 1px), linear-gradient(90deg, var(--text) 1px, transparent 1px)", backgroundSize: "20px 20px" }}></div>
-                   <Image src="/images/logo-wordmark.webp" alt="Technovora" width={400} height={150} className="w-full max-w-[180px] lg:max-w-[200px] 2xl:max-w-[240px] object-contain drop-shadow-xl relative z-10" />
+                   <Image src="/images/logo-wordmark.webp" alt="Technovora" width={400} height={150} className="w-full max-w-[180px] lg:max-w-[200px] 2xl:max-w-[240px] object-contain drop-shadow-xl relative z-10 dark:hidden" />
+                   <Image src="/images/logo-wordmark-dark.webp" alt="Technovora" width={400} height={150} className="hidden w-full max-w-[180px] lg:max-w-[200px] 2xl:max-w-[240px] object-contain drop-shadow-xl relative z-10 dark:block" />
                 </div>
                 <div className="bg-magenta p-4 lg:p-6 2xl:p-10 text-white">
                   <p className="font-mono text-[10px] 2xl:text-xs mb-4 2xl:mb-6 leading-relaxed">

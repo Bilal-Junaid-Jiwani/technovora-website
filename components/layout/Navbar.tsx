@@ -47,7 +47,15 @@ export function Navbar() {
             width={221}
             height={100}
             priority
-            className="h-[44px] w-auto dark:invert dark:hue-rotate-180"
+            className="h-[44px] w-auto dark:hidden"
+          />
+          <Image
+            src="/images/logo-wordmark-dark.webp"
+            alt="Technovora"
+            width={221}
+            height={100}
+            priority
+            className="hidden h-[44px] w-auto dark:block"
           />
         </Link>
 
